@@ -1,0 +1,47 @@
+<?php
+defined('BASEPATH') OR exit('No direct script access allowed');
+
+$route['default_controller'] = 'Home';
+$route['404_override'] = 'errors/error_404';
+$route['translate_uri_dashes'] = TRUE;
+$route['finalizaregistro/(:num)']="home/completadatos/$1";
+$route['visitas/(:any)']="visitas/Visitasv2/$1";
+$route['detallevisitas/(:any)']="visitas/detallesvisitas/$1";
+$route['ImgCliente/(:any)']="Imagen/ImgCliente/$1";
+$route['ImgProveedor/(:any)']="Imagen/ImgProveedor/$1";
+$route['resumencliente']="Clientes/Resumen";
+$route['resumenproveedor']="Proveedores/Resumen";
+$route['realizadasclientes']="perfil/realizadasclientestotal";
+$route['realizadasProveedores']="perfil/realizadasprovetotales";
+$route['listaclientes']="Clientes/lista";
+$route['listaproveedores']="Proveedores/lista";
+$route['datosempresa']="perfil/datosempresa";
+$route['datoscontacto']="perfil/contacto";
+$route['datosuaurio']="perfil/datosuaurio";
+$route['listausuarios']="perfil/usuariomaster";
+$route['productosyservicios']="perfil/productosyservicios";
+$route['certificaciones']="perfil/certificaciones";
+$route['asociaciones']="perfil/asociaciones";
+$route['notificaciones']="perfil/notificaciones";
+$route['calificar']="calificar/calificar";
+$route["calificarproveedor"]="calificar/cuestionario/proveedor";
+$route["calificarcliente"]="calificar/cuestionario/cliente";
+$route["riesgocliente/(:any)"]="Riesgo/RiesgoClientes/$1";
+$route["riesgoproveedor/(:any)"]="Riesgo/RiesgoProveedor/$1";
+$route["detallesriesgo/(:any)/(:any)"]="riesgo/detalles/$1/$2";
+$route["detallesimagen/(:any)/(:any)"]="imagen/detalles/$1/$2";
+$route["cuestionario"]="Calificar/cuestionario";
+$route["gracias"]="Home/gracias";
+$route["visitasclientes"]="visitas/de/clientes";;
+$route["visitasproveedores"]="visitas/de/proveedores";
+$route["visitasotras"]="visitas/de/otros";
+$route["followbussines"]="perfil/followbussines";
+$route["bajafollow/(:num)"]="perfil/bajafollow/$1";
+$route["resultados"]="Busquedas/buscar";
+//para perfiles buscados
+$route["perfilimgcliente/(:any)/(:num)"]="perfilbuscado/perfil/$1/$2";
+$route['perfilimgproveedor/(:any)/(:num)']="perfilbuscado/perfilprov/Proveedor/$1/$2";
+$route["perfildetallesimagen/(:any)/(:any)/(:num)"]="perfilbuscado/detallesimagen/$1/$2/$3";
+$route["perfilriesgoclientes/(:any)/(:num)"]="perfilbuscado/riesgoclientes/$1/$2";
+$route["perfilriesgoproveedores/(:any)/(:num)"]="perfilbuscado/riesgoproveedores/$1/$2";
+$route["perfildetallesriesgo/(:any)/(:any)/(:num)"]="perfilbuscado/detallesrieesgo/$1/$2/$3";
